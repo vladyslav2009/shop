@@ -7,17 +7,23 @@
     <style>
         /* Основной стиль */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #f0f4f7, #f4f4f9);
             margin: 0;
             padding: 0;
             color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background: linear-gradient(45deg, #56ab2f, #a8e063);
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
         .container {
             width: 80%;
@@ -31,111 +37,125 @@
         }
 
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
+            padding: 10px 15px;
             text-decoration: none;
             color: #333;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            background-color: white;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         nav a:hover {
-            color: #4CAF50;
+            color: white;
+            background-color: #56ab2f;
         }
 
         /* Разделы сайта */
         section {
-            background-color: rgb(216, 216, 216);
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 30px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
-            color: #0b140b;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         /* Кнопка */
         .button {
             background-color: #63c066;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .button:hover {
-            background-color: #56b35b;
-        }
-
-        /* Анимация при скролле */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(70px);
-            animation: fadeIn 1s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background-color: #56ab2f;
+            transform: scale(1.05);
         }
 
         /* Формы */
         .form-container {
-            background-color: #a7a4a4;
-            padding: 20px;
-            border-radius: 5px;
+            background-color: #e4e9ec;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         input[type="text"], input[type="email"], textarea {
             width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #63c066;
         }
 
         .form-container button {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.2s ease;
         }
 
         .form-container button:hover {
             background-color: #45a049;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Стили для карточек */
         .card {
             background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin: 20px 0;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
         }
 
         .card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .card p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         /* Карусель */
         .slider {
             width: 80%;
-            margin: 20px auto;
+            margin: 30px auto;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .slides {
@@ -151,20 +171,21 @@
         .slide img {
             width: 100%;
             display: block;
+            border-radius: 20px;
         }
 
         .slider-controls {
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .slider-controls button {
             background-color: #333;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 30px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -172,6 +193,7 @@
         .slider-controls button:hover {
             background-color: #555;
         }
+
     </style>
 </head>
 <body>
@@ -220,52 +242,4 @@
         <div class="slides">
             <div class="slide"><img src="https://via.placeholder.com/800x400/FF0000/FFFFFF?text=Слайд+1" alt="Слайд 1"></div>
             <div class="slide"><img src="https://via.placeholder.com/800x400/00FF00/FFFFFF?text=Слайд+2" alt="Слайд 2"></div>
-            <div class="slide"><img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Слайд+3" alt="Слайд 3"></div>
-        </div>
-    </div>
-
-    <div class="slider-controls">
-        <button onclick="prevSlide()">Предыдущий</button>
-        <button onclick="nextSlide()">Следующий</button>
-    </div>
-</div>
-
-<script>
-    // Функция для изменения текста после нажатия на кнопку
-    function changeText() {
-        document.getElementById("result").innerHTML = "Вы нажали на кнопку!";
-    }
-
-    // Анимация fade-in для каждого сектора
-    document.querySelectorAll('.fade-in').forEach((section, index) => {
-        setTimeout(() => {
-            section.style.animation = 'fadeIn 1s forwards';
-        }, index * 300); // Задержка анимации для каждого раздела
-    });
-
-    // Обработчик отправки формы
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Форма отправлена!');
-    });
-
-    // Слайдер
-    let index = 0;
-    const slides = document.querySelector('.slides');
-    const slideCount = document.querySelectorAll('.slide').length;
-
-    function nextSlide() {
-        index++;
-        if (index === slideCount) index = 0;
-        slides.style.transform = `translateX(${-index * 100}%)`;
-    }
-
-    function prevSlide() {
-        index--;
-        if (index < 0) index = slideCount - 1;
-        slides.style.transform = `translateX(${-index * 100}%)`;
-    }
-</script>
-
-</body>
-</html>
+            <div class="slide"><img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Слайд+3" alt="Слайд 3"></
