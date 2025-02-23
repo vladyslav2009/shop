@@ -263,3 +263,96 @@
 </html>
 
 
+<!-- Гамбургер-меню -->
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Меню -->
+<div class="menu" id="menu">
+    <a href="#about">О сайте</a>
+    <a href="#contact">Контакты</a>
+    <a href="#interactive">Интерактив</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        const hamburger = document.querySelector('.hamburger');
+        menu.classList.toggle('open');
+        hamburger.classList.toggle('open');
+    }
+</script>
+
+<style>
+    /* Гамбургер-меню */
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 5px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Скрытое меню */
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #56ab2f;
+        width: 250px;
+        height: 100%;
+        padding: 40px 20px;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        margin: 20px 0;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+        color: #d1e063;
+    }
+
+    /* Открытие меню */
+    .menu.open {
+        display: block;
+    }
+
+    /* Когда гамбургер меню активирован */
+    .hamburger.open div:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 7px;
+    }
+
+    .hamburger.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open div:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -7px;
+    }
+</style>
+
+
