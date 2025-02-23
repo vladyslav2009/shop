@@ -383,3 +383,37 @@
         color: white;
     }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="filter-controls">
+    <button onclick="filterGallery('all')">Все</button>
+    <button onclick="filterGallery('tanks')">Танки</button>
+    <button onclick="filterGallery('planes')">Самолеты</button>
+</div>
+<div id="gallery">
+    <div class="item tanks"><img src="tank.jpg" alt="Танк"></div>
+    <div class="item planes"><img src="plane.jpg" alt="Самолет"></div>
+    <!-- Добавьте больше элементов с классами -->
+</div>
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            item.style.display = category === 'all' || item.classList.contains(category) ? 'block' : 'none';
+        });
+    }
+</script>
