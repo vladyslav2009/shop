@@ -417,3 +417,46 @@
         });
     }
 </script>
+
+
+
+
+
+<!-- Раздел Викторина -->
+<section id="quiz" style="background-color: #f9f9f9; padding: 40px; border-radius: 10px; text-align: center; margin: 20px 0;">
+    <h2>Тест на знание военной техники</h2>
+    <form id="quiz-form" style="max-width: 600px; margin: 0 auto;">
+        <!-- Вопрос 1 -->
+        <p>1. Какой танк участвовал в Великой Отечественной войне?</p>
+        <label>
+            <input type="radio" name="q1" value="t34" required> Т-34
+        </label><br>
+        <label>
+            <input type="radio" name="q1" value="abrams"> M1 Abrams
+        </label><br><br>
+
+        <!-- Вопрос 2 -->
+        <p>2. Какая страна создала танк Leopard 2?</p>
+        <label>
+            <input type="radio" name="q2" value="germany" required> Германия
+        </label><br>
+        <label>
+            <input type="radio" name="q2" value="usa"> США
+        </label><br><br>
+
+        <!-- Вопрос 3 -->
+        <p>3. Какой самолёт является российским истребителем 5-го поколения?</p>
+        <label>
+            <input type="radio" name="q3" value="su57" required> Су-57
+        </label><br>
+        <label>
+            <input type="radio" name="q3" value="f35"> F-35
+        </label><br><br>
+
+        <button type="submit" class="button" style="background-color: #63c066; color: white; padding: 12px 24px; border-radius: 30px; border: none; cursor: pointer; transition: background-color 0.3s, transform 0.2s;">
+            Проверить ответы
+        </button>
+    </form>
+    <p id="quiz-result" style="margin-top: 20px; font-weight: bold;"></p>
+</section>
+
