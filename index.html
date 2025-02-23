@@ -53,7 +53,6 @@
             background-color: #56ab2f;
         }
 
-        /* Разделы сайта */
         section {
             background-color: #fff;
             padding: 30px;
@@ -72,7 +71,6 @@
             margin-bottom: 20px;
         }
 
-        /* Кнопка */
         .button {
             background-color: #63c066;
             color: white;
@@ -90,7 +88,6 @@
             transform: scale(1.05);
         }
 
-        /* Формы */
         .form-container {
             background-color: #e4e9ec;
             padding: 30px;
@@ -126,7 +123,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Стили для карточек */
         .card {
             background-color: white;
             border-radius: 15px;
@@ -149,7 +145,6 @@
             margin-bottom: 20px;
         }
 
-        /* Карусель */
         .slider {
             width: 80%;
             margin: 30px auto;
@@ -193,14 +188,13 @@
         .slider-controls button:hover {
             background-color: #555;
         }
-
     </style>
 </head>
 <body>
 
 <header>
     <h1>Добро пожаловать на сайт!</h1>
-    <p>Приветствую,Листай чуть ниже!</p>
+    <p>Приветствую, Листай чуть ниже!</p>
 </header>
 
 <nav>
@@ -211,13 +205,13 @@
 
 <div class="container">
     <!-- Раздел 1 -->
-    <section class="fade-in" id="about">
+    <section id="about">
         <h2>О сайте</h2>
         <p>На этом сайте ты можешь посмотреть информацию о военной технике!</p>
     </section>
 
     <!-- Раздел 2 -->
-    <section class="fade-in" id="contact">
+    <section id="contact">
         <h2>Контактная форма</h2>
         <div class="form-container">
             <form id="contact-form">
@@ -230,7 +224,7 @@
     </section>
 
     <!-- Раздел 3 -->
-    <section class="fade-in" id="interactive">
+    <section id="interactive">
         <h2>Интерактивная кнопка</h2>
         <p>Нажмите на кнопку, чтобы увидеть результат:</p>
         <button class="button" onclick="changeText()">Нажми меня</button>
@@ -242,221 +236,30 @@
         <div class="slides">
             <div class="slide"><img src="https://via.placeholder.com/800x400/FF0000/FFFFFF?text=Слайд+1" alt="Танк Т-72Б"></div>
             <div class="slide"><img src="https://via.placeholder.com/800x400/00FF00/FFFFFF?text=Слайд+2" alt="Танк Т-34"></div>
-            <div class="slide"><img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Слайд+3" alt="Слайд 3"></
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="hamburger" onclick="toggleMenu()">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                
-
-
-
-
-
-
-
-
-
-
-                <section class="fade-in" id="about" style="background-image: url('https://via.placeholder.com/1200x600'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                    <h2>О сайте</h2>
-                    <p>Привет,вы попали на мой сайт.На этом сайте я вам раскажу про военную технику,и не только!</p>
-                </section>
-                
-
-
-
-
-
-
-
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        background-color: #ffcc00; /* Цвет фона, замените на нужный */
-                        margin: 0;
-                        padding: 0;
-                        color: #e60909;
-                    }
-                </style>
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сложный сайт</title>
-    <style>
-        /* Основной стиль */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #56ab2f, #a8e063); /* Новый градиентный фон */
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Другие стили */
-        /* ... остальной CSS код ... */
-    </style>
-</head>
-<body>
-    <!-- Твоя основная структура страницы -->
-</body>
-</html>
-
-
-                
-
-
-
-
-
-
-
-
-
-<div class="slider">
-    <div class="slides">
-        <div class="slide">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/T-72B_%28tank%29_1.jpg/800px-T-72B_%28tank%29_1.jpg" alt="Танк Т-72Б">
-        </div>
-        <div class="slide">
-            <img src="https://via.placeholder.com/800x400/00FF00/FFFFFF?text=Слайд+2" alt="Слайд 2">
-        </div>
-        <div class="slide">
-            <img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Слайд+3" alt="Слайд 3">
+            <div class="slide"><img src="https://via.placeholder.com/800x400/0000FF/FFFFFF?text=Слайд+3" alt="Слайд 3"></div>
         </div>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<button onclick="toggleTheme()">Переключить тему</button>
 <script>
-    function toggleTheme() {
-        document.body.classList.toggle('dark-theme');
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        slides[currentSlide].style.display = 'none';
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].style.display = 'block';
     }
-</script>
-<style>
-    .dark-theme {
-        background-color: #333;
-        color: white;
-    }
-</style>
 
+    setInterval(nextSlide, 3000); // Переключение слайдов каждые 3 секунды
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="filter-controls">
-    <button onclick="filterGallery('all')">Все</button>
-    <button onclick="filterGallery('tanks')">Танки</button>
-    <button onclick="filterGallery('planes')">Самолеты</button>
-</div>
-<div id="gallery">
-    <div class="item tanks"><img src="tank.jpg" alt="Танк"></div>
-    <div class="item planes"><img src="plane.jpg" alt="Самолет"></div>
-    <!-- Добавьте больше элементов с классами -->
-</div>
-<script>
-    function filterGallery(category) {
-        const items = document.querySelectorAll('.item');
-        items.forEach(item => {
-            item.style.display = category === 'all' || item.classList.contains(category) ? 'block' : 'none';
-        });
+    function changeText() {
+        document.getElementById('result').innerText = "Вы нажали кнопку!";
     }
 </script>
 
+</body>
+</html>
 
-
-
-
-<!-- Раздел Викторина -->
-<section id="quiz" style="background-color: #f9f9f9; padding: 40px; border-radius: 10px; text-align: center; margin: 20px 0;">
-    <h2>Тест на знание военной техники</h2>
-    <form id="quiz-form" style="max-width: 600px; margin: 0 auto;">
-        <!-- Вопрос 1 -->
-        <p>1. Какой танк участвовал в Великой Отечественной войне?</p>
-        <label>
-            <input type="radio" name="q1" value="t34" required> Т-34
-        </label><br>
-        <label>
-            <input type="radio" name="q1" value="abrams"> M1 Abrams
-        </label><br><br>
-
-        <!-- Вопрос 2 -->
-        <p>2. Какая страна создала танк Leopard 2?</p>
-        <label>
-            <input type="radio" name="q2" value="germany" required> Германия
-        </label><br>
-        <label>
-            <input type="radio" name="q2" value="usa"> США
-        </label><br><br>
-
-        <!-- Вопрос 3 -->
-        <p>3. Какой самолёт является российским истребителем 5-го поколения?</p>
-        <label>
-            <input type="radio" name="q3" value="su57" required> Су-57
-        </label><br>
-        <label>
-            <input type="radio" name="q3" value="f35"> F-35
-        </label><br><br>
-
-        <button type="submit" class="button" style="background-color: #63c066; color: white; padding: 12px 24px; border-radius: 30px; border: none; cursor: pointer; transition: background-color 0.3s, transform 0.2s;">
-            Проверить ответы
-        </button>
-    </form>
-    <p id="quiz-result" style="margin-top: 20px; font-weight: bold;"></p>
-</section>
 
