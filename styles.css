@@ -1,57 +1,101 @@
-/* Общее оформление страницы */
+/* Стили для body */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для текста */
-    background-color: #f4f4f4; /* Светлый фон */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #f0f4f7, #f4f4f9);
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Чтобы padding и margin не влияли на размеры */
+    color: #333;
 }
 
-/* Стили для шапки (header) */
+/* Стили для header */
 header {
-    background-color: #333; /* Темный фон для шапки */
-    color: white; /* Белый текст */
-    text-align: center; /* Текст по центру */
-    padding: 20px 0; /* Отступы сверху и снизу */
+    background: linear-gradient(45deg, #56ab2f, #a8e063);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
 }
 
-/* Стили для заголовка h1 */
-h1 {
-    font-size: 2.5em; /* Увеличенный размер шрифта */
-    margin: 0; /* Убираем отступы */
-}
-
-/* Стили для секции (section) */
-section {
-    padding: 20px; /* Отступы вокруг контента */
-    text-align: center; /* Выравнивание текста по центру */
-}
-
-/* Стили для абзаца p */
-p {
-    font-size: 1.2em; /* Увеличиваем размер шрифта */
-    color: #555; /* Более светлый цвет текста */
-    line-height: 1.6; /* Межстрочный интервал */
-}
-
-/* Стили для футера */
-footer {
-    background-color: #333; /* Темный фон для футера */
-    color: white; /* Белый текст */
-    text-align: center; /* Текст по центру */
-    padding: 10px 0; /* Отступы сверху и снизу */
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+header h1 {
+    font-size: 2.5em;
     margin: 0;
 }
 
-/* Стили для ссылок */
-a {
-    color: #007BFF; /* Голубой цвет для ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
+/* Стили для nav */
+nav {
+    text-align: center;
+    margin-top: 20px;
 }
 
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #56ab2f;
+}
+
+/* Стили для кнопок */
+.button {
+    background-color: #56ab2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #a8e063;
+}
+
+/* Стили для формы */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Стили для слайдера */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    max-width: 100%;
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Отображение первого слайда */
+.slide:first-child {
+    display: block;
 }
